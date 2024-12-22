@@ -1,0 +1,32 @@
+name: Validate SR Linux Configurations
+
+"on":
+  push:
+    paths:
+      - "configs/srl/**"
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate Configurations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Containerlab
+        run: |
+          curl -sL https://get.containerlab.dev | sudo bash
+          containerlab version
+
+      - name: Install Docker Images
+        run: |
+          docker pull ghcr.io/nokia/srlinux
+
+      - name: Validate config on SRL1
+        run: sudo containerlab deploy -t topology/nokia/single_node.yml
+
+      - name: Insect CLAB Topology
+        run: |
+          echo "Validating topology file"
+          sudo containerlab inspect -t topology/nokia/single_node.yml
