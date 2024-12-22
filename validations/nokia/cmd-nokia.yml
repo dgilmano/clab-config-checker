@@ -1,2 +1,2 @@
-cmd1: "show router interfaces"
-cmd2: "show system license"
+commands:
+  - "show router interface"
