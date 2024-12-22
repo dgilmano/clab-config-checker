@@ -2,11 +2,11 @@ name: Validate SR Linux Configurations
 
 on:
   push:
-    branches:
-      - configs/nokia/srl
+    paths:
+      - configs/nokia/srl/srl1.cfg
 
-  pull_request:
-  workflow_dispatch:
+#  pull_request:
+#  workflow_dispatch:
 
 jobs:
   validate:
