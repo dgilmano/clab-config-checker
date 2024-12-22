@@ -32,8 +32,8 @@ def execute_commands_on_router(host, username, password, commands):
 
 if __name__ == "__main__":
     # Paths to the credential and command files
-    credentials_file = "credentials/nokia/srl/creds.yaml"
-    commands_file = "validations/nokia/cmd-nokia.yaml"
+    credentials_file = "/home/runner/work/clab-config-checker/clab-config-checker/credentials/nokia/srl/creds.yaml"
+    commands_file = "/home/runner/work/clab-config-checker/clab-config-checker/validations/nokia/cmd-nokia.yaml"
 
     # Load credentials and commands
     credentials = load_yaml(credentials_file)
