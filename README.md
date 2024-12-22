@@ -74,8 +74,8 @@
 ### Generate Configurations
 2. **Generate router configurations using predefined templates and variables:**
    ```bash
-   python scripts/srl-node-cmd-checker.py \
-   --data templates/build-vars-srl.yaml \
+   python scripts/srl-node-cmd-checker.py
+   --data templates/build-vars-srl.yaml
    --output configs/nokia/srl/
 
 ### Generate Configurations
@@ -96,8 +96,8 @@
 ### Apply Configurations
 4. **Deploy validated configurations to the target routers:**
    ```bash
-   python scripts/apply_configs.py \
-   --target nokia \
+   python scripts/apply_configs.py
+   --target nokia
    --configs configs/nokia/srl1.cfg
 
 ### Check Validation Results
