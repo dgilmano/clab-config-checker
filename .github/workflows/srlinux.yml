@@ -54,4 +54,4 @@ jobs:
       - name: Destroy containerlab topology
         if: always()
         run: |
-          sudo clab destroy --topo topology.yaml
+          sudo clab destroy --topo topology/nokia/single_node.yml
