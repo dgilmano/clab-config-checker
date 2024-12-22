@@ -3,7 +3,7 @@ name: Validate SR Linux Configurations
 on:
   push:
     branches:
-      - configs/srl
+      - main
   pull_request:
 
 jobs:
