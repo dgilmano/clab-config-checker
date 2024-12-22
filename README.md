@@ -70,22 +70,23 @@
    ```bash
    git clone https://github.com/dgilmano/clab-config-checker.git
    cd clab-config-checker
-
+   ```
 2. ### Generate Configurations
 **Generate router configurations using predefined templates and variables:**
    ```bash
    python scripts/srl-node-cmd-checker.py
    --data templates/build-vars-srl.yaml
    --output configs/nokia/srl/
+   ```
 
-### Generate Configurations
-3. **Trigger the CI pipeline to validate configuration files automatically:**
+3. ### Generate Configurations
+**Trigger the CI pipeline to validate configuration files automatically:**
    Add and Commit Configurations:
    ```bash
    git add configs/nokia/srl/srl1.cfg
    git commit -m "Add Nokia SRL1 configuration"
    git push
-
+   ```
 **Run Validation: Once pushed, GitHub Actions will:**
 
 1. Spin up a Containerlab topology.
@@ -93,14 +94,15 @@
 3. Execute the specified show commands from the validations/ directory.
 4. Save the validation results to the output/ directory.
 
-### Apply Configurations
-4. **Deploy validated configurations to the target routers:**
+4. ### Apply Configurations
+**Deploy validated configurations to the target routers:**
    ```bash
    python scripts/apply_configs.py
    --target nokia
    --configs configs/nokia/srl1.cfg
+   ```
 
-### Check Validation Results
-5. **Validation outputs are stored in the output/ directory with filenames matching the executed commands. For example:**
+5. ### Check Validation Results
+**Validation outputs are stored in the output/ directory with filenames matching the executed commands. For example:**
 output/
 └── show_system_interfaces.txt
