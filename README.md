@@ -79,7 +79,7 @@
    --output configs/nokia/srl/
    ```
 
-3. ### Generate Configurations
+3. ### Trigger validation
 **Trigger the CI pipeline to validate configuration files automatically:**
    Add and Commit Configurations:
    ```bash
