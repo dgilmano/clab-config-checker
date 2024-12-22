@@ -3,7 +3,7 @@ name: Validate SR Linux Configurations
 on:
   push:
     paths:
-      - configs/nokia/srl/*
+      - configs/nokia/srl/**
 
 #  pull_request:
 #  workflow_dispatch:
