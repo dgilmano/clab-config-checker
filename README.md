@@ -64,15 +64,15 @@
 
 ## Getting Started
 
-### Installation
-1. **Clone the Repository**  
+1. ### Installation
+**Clone the Repository**  
    Download the repository to your local environment:
    ```bash
    git clone https://github.com/dgilmano/clab-config-checker.git
    cd clab-config-checker
 
-### Generate Configurations
-2. **Generate router configurations using predefined templates and variables:**
+2. ### Generate Configurations
+**Generate router configurations using predefined templates and variables:**
    ```bash
    python scripts/srl-node-cmd-checker.py
    --data templates/build-vars-srl.yaml
