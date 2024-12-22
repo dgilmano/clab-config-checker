@@ -1,10 +1,9 @@
 name: Validate SR Linux Configurations
 
-"on":
+on:
   push:
     paths:
-      - "configs/srl/**"
-  pull_request:
+      - "configs/srl/*"
 
 jobs:
   validate:
@@ -30,3 +29,4 @@ jobs:
         run: |
           echo "Validating topology file"
           sudo containerlab inspect -t topology/nokia/single_node.yml
+
