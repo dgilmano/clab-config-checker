@@ -1,10 +1,10 @@
 # example of a topo file that does not define a custom startup-config
 # as a result, the default configuration will be used by this node
 
-name: clab-srl_lab-srl1
+name: single-node
 topology:
   nodes:
     srl1:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux
-#      startup-config: configs/nokia/srl/srl1.cfg
+      startup-config: /home/runner/work/clab-config-checker/clab-config-checker/configs/nokia/srl/srl1.cfg
