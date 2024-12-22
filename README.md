@@ -72,14 +72,14 @@
    cd clab-config-checker
 
 ### Generate Configurations
-1. **Generate router configurations using predefined templates and variables:**
+2. **Generate router configurations using predefined templates and variables:**
    ```bash
-  python scripts/srl-node-cmd-checker.py \
-  --data templates/build-vars-srl.yaml \
-  --output configs/nokia/srl/
+   python scripts/srl-node-cmd-checker.py \
+   --data templates/build-vars-srl.yaml \
+   --output configs/nokia/srl/
 
 ### Generate Configurations
-1. **Trigger the CI pipeline to validate configuration files automatically.**
+3. **Trigger the CI pipeline to validate configuration files automatically:**
    Add and Commit Configurations:
    ```bash
    git add configs/nokia/srl/srl1.cfg
@@ -94,13 +94,13 @@
 4. Save the validation results to the output/ directory.
 
 ### Apply Configurations
-1. **Deploy validated configurations to the target routers:**
+4. **Deploy validated configurations to the target routers:**
    ```bash
-  python scripts/apply_configs.py \
-  --target nokia \
-  --configs configs/nokia/srl1.cfg
+   python scripts/apply_configs.py \
+   --target nokia \
+   --configs configs/nokia/srl1.cfg
 
 ### Check Validation Results
-1. **Validation outputs are stored in the output/ directory with filenames matching the executed commands. For example:**
+5. **Validation outputs are stored in the output/ directory with filenames matching the executed commands. For example:**
 output/
 └── show_system_interfaces.txt
