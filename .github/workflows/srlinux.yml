@@ -3,8 +3,10 @@ name: Validate SR Linux Configurations
 on:
   push:
     branches:
-      - main
+      - configs/nokia/srl
+
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
