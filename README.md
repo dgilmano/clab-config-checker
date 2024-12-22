@@ -43,9 +43,12 @@
 │   ├── arista.yml
 │   └── juniper.yml
 ├── credentials/
-│   ├── nokia_credentials.yaml
-│   ├── cisco_credentials.yaml
-│   └── juniper_credentials.yaml
+│   └── nokia/
+│       └── creds.yml
+│   └── arista/
+│       └── creds.yml
+│   └── juniper/
+│       └── creds.yml
 ├── output/
 │   └── validation_results/
 ├── templates/
