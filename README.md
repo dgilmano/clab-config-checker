@@ -104,5 +104,7 @@
 
 5. ### Check Validation Results
 **Validation outputs are stored in the output/ directory with filenames matching the executed commands. For example:**
+   ```bash
 output/
 └── show_system_interfaces.txt
+   ```
