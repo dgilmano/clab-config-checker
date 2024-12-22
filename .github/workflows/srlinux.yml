@@ -23,6 +23,12 @@ jobs:
         run: |
           docker pull ghcr.io/nokia/srlinux
 
+      - name: Check currect directory
+        run: |
+          pwd
+          ls
+          ls -la
+
       - name: Validate config on SRL1
         run: sudo containerlab deploy -t topology/nokia/single_node.yml
 
