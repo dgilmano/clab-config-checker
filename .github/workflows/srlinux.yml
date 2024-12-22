@@ -2,8 +2,9 @@ name: Validate SR Linux Configurations
 
 on:
   push:
-    paths:
-      - "configs/srl/*"
+    branches:
+      - configs/srl
+  pull_request:
 
 jobs:
   validate:
