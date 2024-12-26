@@ -38,16 +38,14 @@
 │   ├── nokia/
 │   ├── arista/
 │   └── juniper/
-├── validations/
-│   ├── nokia.yml
-│   ├── arista.yml
-│   └── juniper.yml
-├── output/
-│   └── validation_results/
+├── execution_logs/
+│   ├── nokia/
+│   ├── arista/
+│   └── juniper/
 ├── templates/
-│   ├── build-vars-srl.yaml
-│   ├── build-vars-ceos.yaml
-│   ├── build-vars-jnpr.yaml
+│   ├── nokia/build_vars.yml
+│   ├── arista/build_vars.yml
+│   ├── juniper/build_vars.yml
 │   └── ...
 └── .github/
     └── workflows/
