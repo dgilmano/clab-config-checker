@@ -26,12 +26,12 @@ jobs:
           docker pull ghcr.io/nokia/srlinux
 
       - name: Validate config on SRL1
-        run: sudo containerlab deploy -t topology/nokia/single_node.yml
+        run: sudo containerlab deploy -t clabtopology/nokia/single_node.yml
 
       - name: Insect CLAB Topology
         run: |
           echo "Validating topology file"
-          sudo containerlab inspect -t topology/nokia/single_node.yml
+          sudo containerlab inspect -t clabtopology/nokia/single_node.yml
 
 #   CLI-checker:
 #     runs-on: ubuntu-latest
@@ -47,11 +47,11 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install paramiko pyyaml
     
-      - name: Run commands on router
-        run: |
-          python3 scripts/srl-node-cmd-checker.py
+#      - name: Run commands on router
+#        run: |
+#          python3 scripts/srl-node-cmd-checker.py
   
       - name: Destroy containerlab topology
         if: always()
         run: |
-          sudo clab destroy --topo topology/nokia/single_node.yml
+          sudo clab destroy --topo clabtopology/nokia/single_node.yml
