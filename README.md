@@ -26,36 +26,6 @@
 
 ---
 
-## Directory Structure
-```plaintext
-├── configs/
-│   ├── nokia/
-│   │   ├── srl/
-│   │   └── sros/
-│   ├── arista/
-│   └── juniper/
-├── topology/
-│   ├── nokia/
-│   ├── arista/
-│   └── juniper/
-├── execution_logs/
-│   ├── nokia/
-│   ├── arista/
-│   └── juniper/
-├── templates/
-│   ├── nokia/build_vars.yml
-│   ├── arista/build_vars.yml
-│   ├── juniper/build_vars.yml
-│   └── ...
-└── .github/
-    └── workflows/
-        ├── nokia_ci.yml
-        ├── arista_ci.yml
-        └── juniper_ci.yml
-```
-
----
-
 ## Getting Started
 
 1. ### Installation

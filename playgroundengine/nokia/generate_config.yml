@@ -1,0 +1,9 @@
+---
+- name: Generate router configuration
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Generate configuration from template
+      template:
+        src: ../templates/router_config.j2
+        dest: ../../configs/config1.cfg
