@@ -1,0 +1,43 @@
+2024-12-28 22:37:50.476183 PlayGROUND v3.3.1 ['playgroundengine.py', '--data-file', 'deployments/nokia/srl/single-node/data.yml', '--template', 'playgroundengine/templates/nokia/router_config.j2', '--playbook', 'playgroundengine/templates/nokia/generate_config.yml']
+2024-12-28 22:38:32.951140 PLAYGROUND v0.1 ['playgroundengine.py', '--data-file', 'deployments/nokia/srl/single-node/data.yml', '--template', 'playgroundengine/templates/nokia/router_config.j2', '--playbook', 'playgroundengine/templates/nokia/generate_config.yml']
+2024-12-28 23:27:02.387531 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'deployments/data.yml']
+2024-12-28 23:30:30.548492 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'deployments/data.yml']
+2024-12-28 23:30:30.788943 PLAYGROUND v0.1 exit code 1
+2024-12-28 23:32:33.763368 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'deployments/data.yml']
+2024-12-28 23:32:33.918418 PLAYGROUND v0.1 exit code 1
+2024-12-28 23:34:16.589542 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'deployments/data.yml']
+2024-12-28 23:34:16.744868 PLAYGROUND v0.1 exit code 1
+2024-12-28 23:35:17.576045 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'deployments/data.yml']
+2024-12-28 23:35:17.796114 PLAYGROUND v0.1 exit code 1
+2024-12-28 23:38:32.026818 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'deployments/data.yml']
+2024-12-28 23:38:32.306980 PLAYGROUND v0.1 exit code 1
+2024-12-28 23:40:00.979387 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-28 23:40:01.182694 PLAYGROUND v0.1 exit code 1
+2024-12-29 00:05:49.456445 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:05:50.149181 PLAYGROUND v0.1 exit code 2
+2024-12-29 00:06:50.116972 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:06:50.549097 PLAYGROUND v0.1 exit code 4
+2024-12-29 00:07:14.944477 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:07:15.245240 PLAYGROUND v0.1 exit code 4
+2024-12-29 00:07:31.525672 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:07:31.864922 PLAYGROUND v0.1 exit code 0
+2024-12-29 00:07:40.777831 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:07:42.258196 PLAYGROUND v0.1 exit code 0
+2024-12-29 00:14:10.065948 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:14:12.742031 PLAYGROUND v0.1 exit code 0
+2024-12-29 00:14:21.697716 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:14:22.001485 PLAYGROUND v0.1 exit code 0
+2024-12-29 00:14:39.662292 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:14:40.221072 PLAYGROUND v0.1 exit code 2
+2024-12-29 00:15:47.116159 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:15:47.666606 PLAYGROUND v0.1 exit code 2
+2024-12-29 00:16:52.432292 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:16:53.020251 PLAYGROUND v0.1 exit code 2
+2024-12-29 00:21:18.286666 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:21:19.004732 PLAYGROUND v0.1 exit code 2
+2024-12-29 00:21:37.146506 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:21:37.963658 PLAYGROUND v0.1 exit code 0
+2024-12-29 00:21:52.102902 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:21:52.971078 PLAYGROUND v0.1 exit code 0
+2024-12-29 00:25:26.787538 PLAYGROUND v0.1 ['playgroundengine.py', '-v', 'nokia', '-s', 'srl', '-d', 'playgroundengine/src/playbooks/generate_config.yml']
+2024-12-29 00:25:27.716773 PLAYGROUND v0.1 exit code 0
