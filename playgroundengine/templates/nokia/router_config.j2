@@ -9,8 +9,8 @@ echo "System / Base Configuration"
 #--------------------------------------------------
 system {
     name {
-        host-name SRL1      
-        domain-name domain.local
+        host-name {{ system_name }}      
+        domain-name {{ domain_name }}
     }  
 }
 #--------------------------------------------------
@@ -22,7 +22,7 @@ interface system0 {
     subinterface 0 {
         admin-state enable
         ipv4 {
-            address 1.1.1.1
+            address {{ system_ip }}
         }
     }
 }
@@ -53,7 +53,7 @@ interface ethernet-1/31 {
     subinterface 1 {
         admin-state enable
         ipv4 {
-            address 192.168.1.10/24
+            address {{ srl1_e1_31 }}
         }
         vlan {
             encap {
@@ -77,8 +77,8 @@ network-instance default {
     protocols {
         bgp {
             admin-state enable
-            autonomous-system 65001
-            router-id 1.1.1.1
+            autonomous-system {{ bgp_asn }}
+            router-id {{ system_ip }}
             evpn {
                 rapid-update true
             }
@@ -121,7 +121,7 @@ network-instance default {
                 admin-state enable
                 export-policy export-all
                 import-policy import-all
-                peer-as 65440
+                peer-as {{ bgp_asn_evpn }}
                 failure-detection {
                     enable-bfd true
                     fast-failover true
@@ -132,7 +132,7 @@ network-instance default {
                 evpn {
                     admin-state enable
                 }
-                local-as 65440 {
+                local-as {{ bgp_asn_evpn }} {
                     prepend-global-as false
                 }
                 timers {
@@ -142,7 +142,7 @@ network-instance default {
                     minimum-advertisement-interval 1
                 }
                 transport {
-                    local-address 1.1.1.1
+                    local-address {{ system_ip }}
                 }
             }
         }

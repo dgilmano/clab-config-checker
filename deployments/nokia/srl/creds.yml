@@ -1,7 +1,0 @@
-hostname: "Router1"
-domain_name: "example.local"
-interfaces:
-  - name: "eth0"
-    ip: "192.168.1.1/24"
-  - name: "eth1"
-    ip: "192.168.2.1/24"

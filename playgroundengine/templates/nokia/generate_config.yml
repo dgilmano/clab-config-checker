@@ -1,0 +1,26 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  pre_tasks:
+    - name: Check for Ansible version
+      assert:
+        that: "ansible_version.full is version_compare('2.18.1', '==')"
+        msg:  "Ansible version 2.18.1 is required. Found Ansible version {{ansible_version.full}}"
+
+  tasks:
+    - name: Ensure target directory exists
+      ansible.builtin.file:
+        path: ../../../clabconfigs/nokia/srl/
+        state: directory
+        mode: '0755'
+
+    - name: Ensure target directory exists
+      debug:
+        msg: "Directory path is: TO DO: path check: ../../../clabconfigs/nokia/srl"
+
+    - name: Generate configuration from template
+      template:
+        src: router_config.j2
+        dest: ../../../clabconfigs/nokia/srl/srl1.cfg
