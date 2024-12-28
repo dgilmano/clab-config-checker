@@ -7,4 +7,4 @@ topology:
     srl1:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux
-      startup-config: /home/runner/work/clab-config-checker/clab-config-checker/configs/nokia/srl/srl1.cfg
+      startup-config: /home/runner/work/clab-config-checker/clab-config-checker/clabconfigs/nokia/srl/srl1.cfg
