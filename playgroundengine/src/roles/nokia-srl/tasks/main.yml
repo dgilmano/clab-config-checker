@@ -1,0 +1,15 @@
+---
+
+- name: ensure target directory exists
+  ansible.builtin.file:
+    path: ../../../clabconfigs/nokia/srl/
+    state: directory
+    mode: '0755'
+
+- name: Load variables from file for Nokia SRL Single Node
+  include_vars: "{{ data_file_path }}/data.yml"
+
+- name: generate configuration for Nokia SRL router
+  template:
+    src: router_config.j2
+    dest: "{{ config_dest_path }}/srl1.cfg"

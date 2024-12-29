@@ -1,0 +1,15 @@
+---
+
+- name: ensure target directory exists
+  ansible.builtin.file:
+    path: ../../../clabconfigs/nokia/sros/
+    state: directory
+    mode: '0755'
+
+- name: Load variables from file for Nokia SROS Single Node
+  include_vars: "{{ data_file_path }}/data.yml"
+
+- name: generate configuration for Nokia SROS router
+  template:
+    src: router_config.j2
+    dest: "{{ config_dest_path }}/sros1.cfg"

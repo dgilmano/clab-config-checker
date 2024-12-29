@@ -1,0 +1,20 @@
+###############################################################################
+# PATH VARIABLES#
+###############################################################################
+
+deployments_file: "../../../deployments/data.yml"
+tasks_path_nokia: "playgroundengine/src/playbooks/nokia_tasks.yml"
+tasks_path_arista: "playgroundengine/src/playbooks/arista_tasks.yml"
+tasks_path_juniper: "playgroundengine/src/playbooks/juniper_tasks.yml"
+
+###############################################################################
+# SINGLE NODE DATA FILE#
+###############################################################################
+
+system_name: "SRL1"
+domain_name: "domain.local"
+system_ip: "1.1.1.1"
+srl1_e1_31: "192.168.1.10/24"
+bgp_asn: "65001"
+bgp_asn_evpn: "65440"
+

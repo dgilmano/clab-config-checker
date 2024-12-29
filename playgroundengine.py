@@ -4,8 +4,9 @@ import argparse
 import subprocess
 from datetime import datetime
 
-PLAYGROUND_VERSION = "v0.1"
 AUDIT_LOG = "playgroundengine.log"
+PLAYGROUND_VERSION = "v0.1"
+PLAYBOOK_DIR="playgroundengine/src/playbooks/"
 
 def write_audit_log_entry(args):
     """Write an entry to the audit log."""
@@ -20,9 +21,8 @@ def audit_log_and_exit(exit_code):
 
 def run_ansible_playbook(playbook_path, vendor, subvendor):
     """Run the specified Ansible playbook."""
-    if not os.path.isfile(playbook_path):
-        print(f"Error: Playbook '{playbook_path}' does not exist.")
-        sys.exit(1)
+    if not os.path.isabs(playbook_path):
+        playbook_path = os.path.join(os.path.dirname(__file__), PLAYBOOK_DIR, playbook_path)
 
     command = [
         "ansible-playbook",
@@ -39,7 +39,7 @@ def main():
     parser = argparse.ArgumentParser(description="Playground Engine CLI")
     parser.add_argument("-v", "--vendor", required=True, help="Specify the vendor (e.g., nokia, arista, juniper).")
     parser.add_argument("-s", "--subvendor", required=True, help="Specify the subvendor (e.g., srl, eos).")
-    parser.add_argument("-d", "--playbook", required=True, help="Path to the Ansible playbook.")
+    parser.add_argument("-d", "--playbook", required=True, default=os.path.join(os.path.dirname(__file__), PLAYBOOK_DIR, 'generate_config.yml'), help="Path to the Ansible playbook.")
     parser.add_argument("--ansible-help", action="store_true", help="Show Ansible help.")
 
     args = parser.parse_args()
