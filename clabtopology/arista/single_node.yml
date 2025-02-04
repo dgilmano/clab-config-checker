@@ -1,8 +1,0 @@
-# example of a topo file that does not define a custom startup-config
-# as a result, the default configuration will be used by this node
-
-name: clab-srl_lab-srl1
-topology:
-  nodes:
-    srl1:
-      kind: arista_veos

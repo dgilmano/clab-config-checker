@@ -1,2 +1,2 @@
-data_file_path: "../../../deployments/nokia/srl/single-node"
-config_dest_path: "../../../clabconfigs/nokia/srl"
+#data_file_path: "../../../deployments/{{  }}/srl/single-node"
+#config_dest_path: "../../../deployments/{{  }}/clabconfigs/"

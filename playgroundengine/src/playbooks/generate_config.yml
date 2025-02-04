@@ -1,6 +1,7 @@
 ---
 
-- hosts: localhost
+- name: Generate config file
+  hosts: localhost
   connection: local
   gather_facts: true
 
@@ -14,16 +15,16 @@
     
     - include_role:
         name: nokia-srl
-      when: vendor == "nokia" and subvendor == "srl"
+      when: vendor == "nokia-srl"
 
     - include_role:
         name: nokia-sros
-      when: vendor == "nokia" and subvendor == "sros"
+      when: vendor == "nokia-sros"
 
     - include_role:
         name: arista-ceos
-      when: vendor == "arista" and subvendor == "ceos"
+      when: vendor == "arista-ceos"
 
     - include_role:
         name: juniper-vqfx
-      when: vendor == "juniper" and subvendor == "vqfx"
+      when: vendor == "juniper-vqfx"

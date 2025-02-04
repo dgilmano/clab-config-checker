@@ -1,0 +1,22 @@
+name: four_node_full_mesh
+
+topology:
+  nodes:
+    srl1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+    srl2:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+    srl3:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+    srl4:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+
+  links:
+    - endpoints: ["srl1:e1-1", "srl2:e1-1"]
+    - endpoints: ["srl1:e1-2", "srl3:e1-3"]
+    - endpoints: ["srl2:e1-2", "srl4:e1-3"]
+    - endpoints: ["srl3:e1-1", "srl4:e1-1"]

@@ -1,0 +1,7 @@
+epel-release
+@Development tools
+python-pip
+python-devel.x86_64
+python-netaddr
+git
+pyyaml

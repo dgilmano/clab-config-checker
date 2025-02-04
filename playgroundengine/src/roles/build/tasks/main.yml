@@ -1,0 +1,10 @@
+---
+- name: Clear host_vars directory
+  file: path={{ inventory_dir }}/host_vars/ state=absent
+  tags:
+    - always
+
+- name: Create the host_vars directory
+  file: path={{ inventory_dir }}/host_vars/ state=directory
+  tags:
+    - always

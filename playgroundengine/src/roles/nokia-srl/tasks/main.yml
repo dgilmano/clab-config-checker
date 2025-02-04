@@ -6,10 +6,10 @@
     state: directory
     mode: '0755'
 
-- name: Load variables from file for Nokia SRL Single Node
-  include_vars: "{{ data_file_path }}/data.yml"
+- name: Load variables vars.yml for Nokia SRL Single Node
+  include_vars: "../../../deployments/{{ project_name }}/vars.yml"
 
 - name: generate configuration for Nokia SRL router
   template:
     src: router_config.j2
-    dest: "{{ config_dest_path }}/srl1.cfg"
+    dest: "../../../deployments/{{ project_name }}/clabconfigs/{{ system_name }}.cfg"

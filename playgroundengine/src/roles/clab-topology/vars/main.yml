@@ -1,0 +1,1 @@
+deployments_dir: ../../../deployments/{{ project_name }}

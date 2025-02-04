@@ -1,0 +1,24 @@
+---
+- name: Initialize project environment
+  hosts: localhost
+  connection: local
+
+  pre_tasks:
+    - name: Check for Ansible version
+      assert:
+        that: "ansible_version.full is version_compare('2.18.1', '==')"
+        msg:  "Ansible version 2.18.1 is required. Found Ansible version {{ansible_version.full}}"
+
+  tasks:
+
+    - include_role:
+    # Check that deployments directory is present
+        name: common
+        tasks_from: deployment-validation
+
+    - include_role:
+    # Check that inventory/host_vars file is present
+        name: build
+
+- name: Create CLAB Topology
+  import_playbook: create_topology.yml

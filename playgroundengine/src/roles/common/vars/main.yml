@@ -1,0 +1,8 @@
+# Deployment (configuration) files
+deployment_files:
+  - name: "common"
+    is_list: no
+    required: yes
+    encrypted: no
+
+deployment_dir: "../../../deployments"

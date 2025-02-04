@@ -1,0 +1,6 @@
+---
+
+- name: Create topology file from template
+  template:
+    src: "{{ topology_schema }}.j2"
+    dest: "{{ deployments_dir }}/clab_topology.yml"
