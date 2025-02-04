@@ -10,15 +10,15 @@
         msg:  "Ansible version 2.18.1 is required. Found Ansible version {{ansible_version.full}}"
 
   tasks:
-
     - include_role:
-    # Check that deployments directory is present
-        name: common
-        tasks_from: deployment-validation
-
-    - include_role:
-    # Check that inventory/host_vars file is present
         name: build
+      
+    - name: Import Playbook create_topology.yml
+      debug:
+        msg:
+          - "************************************************"
+          - "Import CLAB Create Topology Playbook"
+          - "************************************************"
 
-- name: Create CLAB Topology
+- name: Import Playbook create_topology.yml
   import_playbook: create_topology.yml

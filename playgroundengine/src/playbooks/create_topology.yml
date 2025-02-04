@@ -1,41 +1,17 @@
-# ---
-# - name: Create topology file
-#   hosts: localhost
-#   connection: local
-#   gather_facts: false
-
-#   vars:
-#     topology_template: "/Users/dgilmano/Documents/Programming/Python/GitHub/clab-config-checker/playgroundengine/src/deployments_templates/clab_topologies/single_node.j2"
-#     output_file: "../../../deployments/{{ project_name }}/clab_topology.yml"
-
-#   tasks:
-#     - name: Create topology file from template
-#       template:
-#         src: "{{ topology_template }}"
-#         dest: "{{ output_file }}"
-
 ---
 - name: Create topology file
   hosts: localhost
   connection: local
   gather_facts: false
 
-  # vars_files:
-  #   - "../../../deployments/{{ project_name }}/vars.yml"
-
-  # tasks:
-  #   - name: Set topology template path
-  #     set_fact:
-  #       topology_template: "/Users/dgilmano/Documents/Programming/Python/GitHub/clab-config-checker/playgroundengine/src/deployments_templates/clab_topologies/{{ topology_schema }}.j2"
-
-  #   - name: Create topology file from template
-  #     template:
-  #       src: "{{ topology_template }}"
-  #       dest: "../../../deployments/{{ project_name }}/clab_topology.yml"
-
   tasks:
 
-    # - name: Create CLAB Topology file
+    - name: Import Playbook create_topology.yml
+      debug:
+          msg:
+          - "************************************************"
+          - "Import CLAB Topology Role"
+          - "************************************************"
+
     - include_role:
         name: clab-topology
-

@@ -129,7 +129,7 @@ def build_action(config_file: str):
     vars_file_path = os.path.join("deployments", project_name, "vars.yml")
     create_vars_file(build_vars, vars_file_path)
 
-    playbook_path = os.path.join(PLAYBOOK_DIR, "create_topology.yml")
+    playbook_path = os.path.join(PLAYBOOK_DIR, "build.yml")
     logging.info(f"Playbook Path: {playbook_path}")
     run_ansible_playbook(playbook_path, vars_file_path)
 
