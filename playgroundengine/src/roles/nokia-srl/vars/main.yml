@@ -1,2 +1,1 @@
-#data_file_path: "../../../deployments/{{  }}/srl/single-node"
-#config_dest_path: "../../../deployments/{{  }}/clabconfigs/"
+deployments_dir: "../../../deployments/"

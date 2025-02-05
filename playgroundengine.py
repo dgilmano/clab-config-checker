@@ -89,6 +89,9 @@ def create_project_dir(project_name):
     return project_dir
 
 def create_vars_file(vars_data, vars_file_path):
+    """Create project directory if not exists"""
+    os.makedirs(os.path.dirname(vars_file_path), exist_ok=True)
+    
     """Create a vars file for Ansible playbook."""
     with open(vars_file_path, "w") as file:
         yaml.dump(vars_data, file)
@@ -100,7 +103,7 @@ def generate_config_file(project_name, vars_file_path):
     if not os.path.exists(config_dir):
         os.makedirs(config_dir)
         print(f"Created config directory: {config_dir}")
-    config_file_path = os.path.join(config_dir, "config.yml")
+    config_file_path = os.path.join(config_dir)
 
     with open(vars_file_path, "r") as vars_file:
         vars_data = yaml.safe_load(vars_file)
@@ -125,6 +128,8 @@ def build_action(config_file: str):
     if not topology_schema:
         logging.error("'topology_schema' not found in config file")
         sys.exit(1)
+    
+    create_project_dir(project_name)
 
     vars_file_path = os.path.join("deployments", project_name, "vars.yml")
     create_vars_file(build_vars, vars_file_path)

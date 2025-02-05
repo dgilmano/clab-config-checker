@@ -1,0 +1,38 @@
+name: 3tier_leaf_spine_ss
+
+topology:
+  nodes:
+    ss1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/SS1.cfg
+    ss2:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/SS2.cfg
+    spine1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/SPINE1.cfg
+    spine2:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/SPINE2.cfg
+    leaf1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/LEAF1.cfg
+    leaf2:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/LEAF2.cfg
+
+  links:
+    - endpoints: ["spine1:e1-2", "ss1:e1-2"]
+    - endpoints: ["spine1:e1-3", "ss2:e1-3"]
+    - endpoints: ["spine2:e1-2", "ss1:e1-2"]
+    - endpoints: ["spine2:e1-3", "ss2:e1-3"]
+    - endpoints: ["leaf1:e1-2", "ss1:e1-2"]
+    - endpoints: ["leaf1:e1-3", "ss2:e1-3"]
+    - endpoints: ["leaf2:e1-2", "ss1:e1-2"]
+    - endpoints: ["leaf2:e1-3", "ss2:e1-3"]

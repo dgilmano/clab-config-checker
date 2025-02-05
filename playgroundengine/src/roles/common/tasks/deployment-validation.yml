@@ -1,24 +1,5 @@
 ---
 
-#- name: Gather deployment file stats
-#  stat:
-#    path: "{{ deployment_dir }}/{{ item.name }}.yml"
-#  register: deployment_file_stat
-#  with_items: "{{ deployment_files }}"
-
-#- name: Validate required deployment files exist
-#  assert:
-#    that: "not {{ item.0.required }} or {{ item.1.stat.exists }}"
-#    msg: "Required deployment file {{ item.0.name }}.yml does not exist"
-#  with_together:
-#    - "{{ deployment_files }}"
-#    - "{{ deployment_file_stat.results }}"
-
-#- name: Validate deployment file yaml format
-#  command: yamllint "{{ item.stat.path }}"
-#  when: item.stat.exists
-#  with_items: "{{ deployment_file_stat.results }}"
-
 - name: Check if deployments directory exists
   stat:
     path: "{{ deployment_dir }}"

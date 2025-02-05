@@ -1,0 +1,16 @@
+name: {{ topology_schema }}
+
+topology:
+  nodes:
+{% for node in nodes %}
+    {{ node.system_name | lower }}:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/{{ node.system_name }}.cfg
+{% endfor %}
+
+  links:
+{% for i in range(2, nodes|length) %}
+    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-2", "{{ nodes[0].system_name | lower }}:e1-2"]
+    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-3", "{{ nodes[1].system_name | lower }}:e1-3"]
+{% endfor %}

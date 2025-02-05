@@ -12,6 +12,9 @@
   tasks:
     - include_role:
         name: build
+
+    - include_role:
+        name: common
       
     - name: Import Playbook create_topology.yml
       debug:

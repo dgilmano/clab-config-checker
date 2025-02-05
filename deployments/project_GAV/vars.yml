@@ -1,9 +1,0 @@
-bgp_asn: '65001'
-bgp_asn_evpn: '65440'
-domain_name: domain.local
-project_name: project_GAV
-srl1_e1_31: 192.168.1.10/24
-system_ip: 1.1.1.1
-system_name: SRL1
-topology_schema: two_node
-vendor: nokia-srl

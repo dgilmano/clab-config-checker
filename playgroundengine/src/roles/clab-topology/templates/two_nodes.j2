@@ -8,3 +8,8 @@ topology:
       image: ghcr.io/nokia/srlinux
       startup-config: clabconfigs/{{ node.system_name }}.cfg
 {% endfor %}
+
+  links:
+{% for i in range(0, nodes|length, 2) %}
+    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-1", "{{ nodes[i+1].system_name | lower }}:e1-1"]
+{% endfor %}
