@@ -16,6 +16,6 @@ nodes:
   system0: 1.1.1.1
   system_name: SRL1
   timezone: Europe/Amsterdam
-project_name: project_SRL_Single_Node
+project_name: srl_onenode_lab
 topology_schema: single_node
 vendor: nokia-srl

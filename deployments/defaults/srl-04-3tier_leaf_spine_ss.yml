@@ -1,7 +1,7 @@
 # Common Configuration Settings
 #
 # Common configuration settings for this deployment
-project_name: project_SRL_3Tier_Leaf_Spine_SS
+project_name: srl_3tier_lab
 vendor: nokia-srl
 
 # CLAB Topology

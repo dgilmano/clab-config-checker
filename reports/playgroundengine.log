@@ -695,3 +695,88 @@
 2025-02-05 22:20:53,839 - INFO - Action: generate-config
 2025-02-05 22:20:53,839 - INFO - Config File: deployments/project_SRL_Single_Node/vars.yml
 2025-02-05 22:20:54,927 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:29:59,768 - INFO - Action: build
+2025-02-05 22:29:59,769 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:29:59,771 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:30:00,595 - ERROR - PLAYGROUND v0.1 exit code 2
+2025-02-05 22:31:07,146 - INFO - Action: build
+2025-02-05 22:31:07,146 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:31:07,148 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:31:08,840 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:33:58,741 - INFO - Action: build
+2025-02-05 22:33:58,741 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:33:58,743 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:34:01,466 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:37:32,802 - INFO - Action: build
+2025-02-05 22:37:32,802 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:37:32,804 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:37:34,526 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:37:50,387 - INFO - Action: generate-config
+2025-02-05 22:37:50,387 - INFO - Config File: deployments/srl_minimal_lab/vars.yml
+2025-02-05 22:37:51,474 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:39:10,396 - INFO - Action: build
+2025-02-05 22:39:10,396 - INFO - Config File: deployments/defaults/srl-02-two-nodes.yml
+2025-02-05 22:39:10,400 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:39:12,380 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:39:32,547 - INFO - Action: build
+2025-02-05 22:39:32,547 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:39:32,549 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:39:35,241 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:39:38,070 - INFO - Action: build
+2025-02-05 22:39:38,070 - INFO - Config File: deployments/defaults/srl-02-two-nodes.yml
+2025-02-05 22:39:38,074 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:39:40,042 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:39:51,056 - INFO - Action: generate-config
+2025-02-05 22:39:51,056 - INFO - Config File: deployments/srl_two_nodes_lab/vars.yml
+2025-02-05 22:39:52,407 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:41:48,185 - INFO - Action: build
+2025-02-05 22:41:48,185 - INFO - Config File: deployments/defaults/srl-03-2tier_leaf_spine.yml
+2025-02-05 22:41:48,191 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:41:50,756 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:41:56,757 - INFO - Action: build
+2025-02-05 22:41:56,757 - INFO - Config File: deployments/defaults/srl-04-3tier_leaf_spine_ss.yml
+2025-02-05 22:41:56,764 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:41:59,798 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:42:24,618 - INFO - Action: build
+2025-02-05 22:42:24,618 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:42:24,620 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:42:26,355 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:43:06,788 - INFO - Action: build
+2025-02-05 22:43:06,788 - INFO - Config File: deployments/defaults/srl-01-single-node.yml
+2025-02-05 22:43:06,790 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:43:08,515 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:43:15,368 - INFO - Action: build
+2025-02-05 22:43:15,368 - INFO - Config File: deployments/defaults/srl-02-two-nodes.yml
+2025-02-05 22:43:15,372 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:43:17,341 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:43:20,797 - INFO - Action: build
+2025-02-05 22:43:20,797 - INFO - Config File: deployments/defaults/srl-03-2tier_leaf_spine.yml
+2025-02-05 22:43:20,802 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:43:23,302 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:43:27,274 - INFO - Action: build
+2025-02-05 22:43:27,274 - INFO - Config File: deployments/defaults/srl-04-3tier_leaf_spine_ss.yml
+2025-02-05 22:43:27,281 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:43:30,354 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:43:52,049 - INFO - Action: generate-config
+2025-02-05 22:43:52,049 - INFO - Config File: deployments/srl_onenode_lab/vars.yml
+2025-02-05 22:43:53,122 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:43:59,303 - INFO - Action: generate-config
+2025-02-05 22:43:59,303 - INFO - Config File: deployments/srl_two_nodes_lab/vars.yml
+2025-02-05 22:44:00,647 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:44:05,750 - INFO - Action: generate-config
+2025-02-05 22:44:05,750 - INFO - Config File: deployments/srl_2tier_lab/vars.yml
+2025-02-05 22:44:07,714 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:44:11,851 - INFO - Action: generate-config
+2025-02-05 22:44:11,851 - INFO - Config File: deployments/srl_3tier_lab/vars.yml
+2025-02-05 22:44:14,311 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:46:23,909 - INFO - Action: generate-config
+2025-02-05 22:46:23,909 - INFO - Config File: deployments/srl_3tier_lab/vars.yml
+2025-02-05 22:46:26,424 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:46:31,594 - INFO - Action: build
+2025-02-05 22:46:31,594 - INFO - Config File: deployments/defaults/srl-04-3tier_leaf_spine_ss.yml
+2025-02-05 22:46:31,602 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:46:34,616 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-05 22:48:25,555 - INFO - Action: build
+2025-02-05 22:48:25,555 - INFO - Config File: deployments/defaults/srl-04-3tier_leaf_spine_ss.yml
+2025-02-05 22:48:25,562 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-05 22:48:28,304 - INFO - PLAYGROUND v0.1 exit code 0

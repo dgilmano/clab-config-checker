@@ -23,5 +23,5 @@
           - "Import CLAB Create Topology Playbook"
           - "************************************************"
 
-- name: Import Playbook create_topology.yml
+- name: Import Playbook -> create_topology.yml
   import_playbook: create_topology.yml

@@ -1,7 +1,7 @@
 # Common Configuration Settings
 #
 # Common configuration settings for this deployment
-project_name: project_SRL_Two_Node
+project_name: srl_two_nodes_lab
 vendor: nokia-srl
 
 # CLAB Topology

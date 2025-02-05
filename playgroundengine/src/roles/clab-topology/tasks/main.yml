@@ -1,10 +1,5 @@
 ---
 
-# - name: Create topology file from template
-#   template:
-#     src: "{{ topology_schema }}.j2"
-#     dest: "{{ deployments_dir }}/clab_topology.yml"
-
 - name: Add config_file entry to clab_topology.yml for each node
   template:
     src: "{{ topology_schema }}.j2"
