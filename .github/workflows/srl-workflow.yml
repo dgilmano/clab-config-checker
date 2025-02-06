@@ -1,0 +1,78 @@
+name: Validate SR Linux Configurations
+
+on:
+  push:
+    paths:
+      - deployments/srl_onenode_lab/**
+      - deployments/srl_two_nodes_lab/**
+      - deployments/srl_2tier_lab/**
+      - deployments/srl_3tier_lab/**
+
+jobs:
+  SRL-deploy:
+    name: Validate Configurations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip
+          python3 -m pip install --upgrade pip
+          pip install paramiko pyyaml
+      
+      - name: Install Containerlab
+        run: |
+          curl -sL https://get.containerlab.dev | sudo bash
+          containerlab version
+
+      - name: Install Docker Images
+        run: |
+          docker pull ghcr.io/nokia/srlinux
+
+      - name: Validate config for One Node Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_onenode_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_onenode_lab/')
+        run: sudo containerlab deploy -t deployments/srl_onenode_lab/clab_topology.yml
+
+      - name: Validate config for Two Node Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_two_nodes_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_two_nodes_lab/')
+        run: sudo containerlab deploy -t deployments/srl_two_nodes_lab/clab_topology.yml
+
+      - name: Validate config for 2 Tier Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_2tier_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_2tier_lab/')
+        run: sudo containerlab deploy -t deployments/srl_2tier_lab/clab_topology.yml
+
+      - name: Validate config for 3 Tier Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_3tier_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_3tier_lab/')
+        run: sudo containerlab deploy -t deployments/srl_3tier_lab/clab_topology.yml
+
+      - name: Insect CLAB Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_onenode_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_onenode_lab/')
+        run: |
+          echo "Validating topology file"
+          sudo containerlab inspect -t deployments/srl_onenode_lab/clab_topology.yml
+
+      - name: Insect CLAB Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_two_nodes_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_two_nodes_lab/')
+        run: |
+          echo "Validating topology file"
+          sudo containerlab inspect -t deployments/srl_two_nodes_lab/clab_topology.yml
+
+      - name: Insect CLAB Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_2tier_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_2tier_lab/')
+        run: |
+          echo "Validating topology file"
+          sudo containerlab inspect -t deployments/srl_2tier_lab/clab_topology.yml
+
+      - name: Insect CLAB Topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_3tier_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_3tier_lab/')
+        run: |
+          echo "Validating topology file"
+          sudo containerlab inspect -t deployments/srl_3tier_lab/clab_topology.yml
+    
+      - name: Destroy containerlab topology
+        if: contains(github.event.head_commit.message, 'deployments/srl_onenode_lab') || contains(join(github.event.commits.*.modified, ','), 'deployments/srl_onenode_lab/')
+        run: |
+          sudo clab destroy --topo deployments/srl_onenode_lab/clab_topology.yml
