@@ -33,46 +33,42 @@ jobs:
           docker pull ghcr.io/nokia/srlinux
 
       - name: Validate config for One Node Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_onenode_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_onenode_lab')
         run: sudo containerlab deploy -t deployments/srl_onenode_lab/clab_topology.yml
 
       - name: Validate config for Two Node Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_two_nodes_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_two_nodes_lab')
         run: sudo containerlab deploy -t deployments/srl_two_nodes_lab/clab_topology.yml
 
       - name: Validate config for 2 Tier Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_2tier_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_2tier_lab')
         run: sudo containerlab deploy -t deployments/srl_2tier_lab/clab_topology.yml
 
       - name: Validate config for 3 Tier Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_3tier_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_3tier_lab')
         run: sudo containerlab deploy -t deployments/srl_3tier_lab/clab_topology.yml
 
       - name: Insect CLAB One Node Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_onenode_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_onenode_lab')
         run: |
           echo "Validating topology file"
           sudo containerlab inspect -t deployments/srl_onenode_lab/clab_topology.yml
 
       - name: Insect CLAB Two Node Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_two_nodes_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_two_nodes_lab')
         run: |
           echo "Validating topology file"
           sudo containerlab inspect -t deployments/srl_two_nodes_lab/clab_topology.yml
 
       - name: Insect CLAB 2Tier Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_2tier_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_2tier_lab')
         run: |
           echo "Validating topology file"
           sudo containerlab inspect -t deployments/srl_2tier_lab/clab_topology.yml
 
       - name: Insect CLAB 3Tier Topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_3tier_lab]')
+        if: contains(github.event.head_commit.message, 'validate srl_3tier_lab')
         run: |
           echo "Validating topology file"
           sudo containerlab inspect -t deployments/srl_3tier_lab/clab_topology.yml
     
-      - name: Destroy CLAB One Node topology
-        if: contains(github.event.head_commit.message, '[deployments/srl_onenode_lab]')
-        run: |
-          sudo clab destroy --topo deployments/srl_onenode_lab/clab_topology.yml
