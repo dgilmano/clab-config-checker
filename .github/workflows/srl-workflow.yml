@@ -7,6 +7,7 @@ on:
       - deployments/srl_two_nodes_lab/**
       - deployments/srl_2tier_lab/**
       - deployments/srl_3tier_lab/**
+      
     branches:
       - main
 
