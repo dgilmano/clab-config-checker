@@ -1,4 +1,4 @@
-name: Validate SR Linux Configurations
+name: Validate SRL Configurations
 
 on:
   push:
