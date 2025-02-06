@@ -31,6 +31,14 @@ jobs:
       - name: Install Docker Images
         run: |
           docker pull ghcr.io/nokia/srlinux
+      
+      - name: Debug commit message 1
+        run: |
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+
+      - name: Debug commit message 2
+        run: |
+          echo "Modified files: ${{ toJson(github.event.head_commit.modified) }}"
 
       - name: Validate config for One Node Topology
         if: contains(github.event.head_commit.message, 'validate [srl_onenode_lab]')
