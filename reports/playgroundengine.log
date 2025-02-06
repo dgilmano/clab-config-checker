@@ -1,0 +1,7 @@
+2025-02-06 13:22:43,681 - INFO - Action: build
+2025-02-06 13:22:43,681 - INFO - Config File: deployments/defaults/srl-02-two-nodes.yml
+2025-02-06 13:22:43,684 - INFO - Playbook Path: playgroundengine/src/playbooks/build.yml
+2025-02-06 13:22:45,678 - INFO - PLAYGROUND v0.1 exit code 0
+2025-02-06 13:22:57,165 - INFO - Action: generate-config
+2025-02-06 13:22:57,165 - INFO - Config File: deployments/srl_two_nodes_lab/vars.yml
+2025-02-06 13:22:58,544 - INFO - PLAYGROUND v0.1 exit code 0

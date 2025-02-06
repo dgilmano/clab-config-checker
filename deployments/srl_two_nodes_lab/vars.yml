@@ -1,0 +1,38 @@
+nodes:
+- bgp_asn: '64501'
+  bgp_evpn_asn: '65501'
+  dns_server1: 192.168.255.254
+  dns_server2: 192.168.255.255
+  domain_name: domain.local
+  load_balancing_hash_seed: 5131
+  mgmt_ip: 192.168.1.10
+  mgmt_ip_prefix: 24
+  next_hop: 192.168.1.1
+  node_id: '1'
+  ntp_server1: 192.168.255.254
+  ntp_server2: 192.168.255.255
+  srl1_e1_31: 172.16.1.1/24
+  static_route: 0.0.0.0/0
+  system0: 1.1.1.1
+  system_name: SRL1
+  timezone: Europe/Amsterdam
+- bgp_asn: '64501'
+  bgp_evpn_asn: '65501'
+  dns_server1: 192.168.255.254
+  dns_server2: 192.168.255.255
+  domain_name: domain.local
+  load_balancing_hash_seed: 5131
+  mgmt_ip: 192.168.1.20
+  mgmt_ip_prefix: 24
+  next_hop: 192.168.1.1
+  node_id: '2'
+  ntp_server1: 192.168.255.254
+  ntp_server2: 192.168.255.255
+  srl1_e1_31: 172.16.1.1/24
+  static_route: 0.0.0.0/0
+  system0: 1.1.1.1
+  system_name: SRL2
+  timezone: Europe/Amsterdam
+project_name: srl_two_nodes_lab
+topology_schema: two_nodes
+vendor: nokia-srl

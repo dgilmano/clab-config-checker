@@ -1,0 +1,15 @@
+name: two_nodes
+
+topology:
+  nodes:
+    srl1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/SRL1.cfg
+    srl2:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config: clabconfigs/SRL2.cfg
+
+  links:
+    - endpoints: ["srl1:e1-1", "srl2:e1-1"]
