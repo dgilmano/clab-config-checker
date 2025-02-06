@@ -19,6 +19,6 @@ topology:
 
   links:
     - endpoints: ["leaf1:e1-2", "spine1:e1-2"]
-    - endpoints: ["leaf1:e1-3", "spine2:e1-3"]
-    - endpoints: ["leaf2:e1-2", "spine1:e1-2"]
+    - endpoints: ["leaf1:e1-3", "spine2:e1-2"]
+    - endpoints: ["leaf2:e1-2", "spine1:e1-3"]
     - endpoints: ["leaf2:e1-3", "spine2:e1-3"]

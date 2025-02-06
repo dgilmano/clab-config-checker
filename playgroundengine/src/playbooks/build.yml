@@ -16,12 +16,5 @@
     - include_role:
         name: common
       
-    - name: Import Playbook create_topology.yml
-      debug:
-        msg:
-          - "************************************************"
-          - "Import CLAB Create Topology Playbook"
-          - "************************************************"
-
 - name: Import Playbook -> create_topology.yml
   import_playbook: create_topology.yml

@@ -6,8 +6,8 @@ vendor: nokia-srl
 
 # CLAB Topology
 #
-# Specify CLAB topology schema.
-# Designed for single node topology.
+# CLAB topology schema: one standalone node.
+# Variable should not not be changed.
 
 topology_schema: single_node
 

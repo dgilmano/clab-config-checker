@@ -6,8 +6,8 @@ vendor: nokia-srl
 
 # CLAB Topology
 #
-# Specify CLAB topology schema.
-# Designed for Two directly connected nodes topology.
+# CLAB topology schema: two tier leaf-spine topology.
+# Variable should not not be changed.
 
 topology_schema: 2tier_leaf_spine
 

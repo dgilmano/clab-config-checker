@@ -28,11 +28,11 @@ topology:
       startup-config: clabconfigs/LEAF2.cfg
 
   links:
-    - endpoints: ["spine1:e1-2", "ss1:e1-2"]
-    - endpoints: ["spine1:e1-3", "ss2:e1-3"]
-    - endpoints: ["spine2:e1-2", "ss1:e1-2"]
-    - endpoints: ["spine2:e1-3", "ss2:e1-3"]
-    - endpoints: ["leaf1:e1-2", "ss1:e1-2"]
-    - endpoints: ["leaf1:e1-3", "ss2:e1-3"]
-    - endpoints: ["leaf2:e1-2", "ss1:e1-2"]
-    - endpoints: ["leaf2:e1-3", "ss2:e1-3"]
+    - endpoints: ["leaf1:e1-2", "spine1:e1-2"]
+    - endpoints: ["leaf1:e1-3", "spine2:e1-2"]
+    - endpoints: ["leaf2:e1-2", "spine1:e1-3"]
+    - endpoints: ["leaf2:e1-3", "spine2:e1-3"]
+    - endpoints: ["spine1:e1-4", "ss1:e1-1"]
+    - endpoints: ["spine1:e1-5", "ss2:e1-1"]
+    - endpoints: ["spine2:e1-4", "ss1:e1-2"]
+    - endpoints: ["spine2:e1-5", "ss2:e1-2"]

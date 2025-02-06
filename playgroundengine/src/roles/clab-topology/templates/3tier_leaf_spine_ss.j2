@@ -10,7 +10,12 @@ topology:
 {% endfor %}
 
   links:
-{% for i in range(2, nodes|length) %}
-    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-2", "{{ nodes[0].system_name | lower }}:e1-2"]
-    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-3", "{{ nodes[1].system_name | lower }}:e1-3"]
+{% for i in range(4, nodes|length) %}
+    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-2", "{{ nodes[2].system_name | lower }}:e1-{{ i - 2 }}"]
+    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-3", "{{ nodes[3].system_name | lower }}:e1-{{ i - 2 }}"]
+{% endfor %}
+{% for i in range(2, 4) %}
+{% for j in range(0, 2) %}
+    - endpoints: ["{{ nodes[i].system_name | lower }}:e1-{{ 4 + j }}", "{{ nodes[j].system_name | lower }}:e1-{{ i - 1 }}"]
+{% endfor %}
 {% endfor %}
